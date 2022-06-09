@@ -1,0 +1,225 @@
+[
+    {
+        "label": "main",
+        "importPath": "json.tool",
+        "description": "json.tool",
+        "isExtraImport": true,
+        "detail": "json.tool",
+        "documentation": {}
+    },
+    {
+        "label": "random",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "random",
+        "description": "random",
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "truediv",
+        "importPath": "operator",
+        "description": "operator",
+        "isExtraImport": true,
+        "detail": "operator",
+        "documentation": {}
+    },
+    {
+        "label": "seqsearch",
+        "kind": 2,
+        "importPath": "Chapter01.example.1_seq_search",
+        "description": "Chapter01.example.1_seq_search",
+        "peekOfCode": "def seqsearch(lst, x):\n    index = 0\n    while index < len(lst) and lst[index] != x:\n        index += 1\n    if index == len(lst):\n        index = -1\n    return index\nif __name__ == \"__main__\":\n    lst = [5, 7, 8, 10, 11, 13]\n    print(seqsearch(lst, 10))",
+        "detail": "Chapter01.example.1_seq_search",
+        "documentation": {}
+    },
+    {
+        "label": "sum_lst",
+        "kind": 2,
+        "importPath": "Chapter01.example.2_sum_lst",
+        "description": "Chapter01.example.2_sum_lst",
+        "peekOfCode": "def sum_lst(lst):\n    sum = 0\n    for index in lst:\n        sum += index\n    return sum\nif __name__ == \"__main__\":\n    lst = []\n    for _ in range(10):\n        lst.append(random.randint(0, 20))\n    print(lst)",
+        "detail": "Chapter01.example.2_sum_lst",
+        "documentation": {}
+    },
+    {
+        "label": "exchange_sort",
+        "kind": 2,
+        "importPath": "Chapter01.example.3_exchange_sort",
+        "description": "Chapter01.example.3_exchange_sort",
+        "peekOfCode": "def exchange_sort(lst):\n    for i in range(0, len(lst)):\n        for j in range(i + 1, len(lst) - 1):\n            if lst[j] < lst[i]:\n                lst[j], lst[i] = lst[i], lst[j]\nif __name__ == \"__main__\":\n    lst = []\n    for _ in range(10):\n        lst.append(random.randint(0, 20))\n    print(lst)",
+        "detail": "Chapter01.example.3_exchange_sort",
+        "documentation": {}
+    },
+    {
+        "label": "multi_matrix",
+        "kind": 2,
+        "importPath": "Chapter01.example.4_multi_matrix",
+        "description": "Chapter01.example.4_multi_matrix",
+        "peekOfCode": "def multi_matrix(a, b, c):\n    for i in range(0, 3):\n        for j in range(0, 3):\n            for k in range(0, 3):\n                c[i][j] = a[i][k] * b[k][j]\nif __name__ == \"__main__\":\n    a = [[0, 1, 2], [1, 2, 3], [2, 3, 4]]\n    b = [[1, 2, 3], [2, 3, 4], [3, 4, 5]]\n    c = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]\n    multi_matrix(a, b, c)",
+        "detail": "Chapter01.example.4_multi_matrix",
+        "documentation": {}
+    },
+    {
+        "label": "binary_search",
+        "kind": 2,
+        "importPath": "Chapter01.example.5_binary_search",
+        "description": "Chapter01.example.5_binary_search",
+        "peekOfCode": "def binary_search(lst, x):\n    low, high = 1, len(lst) - 1\n    index = -1\n    while low <= high and index == 0:\n        mid = (low + high) // 2\n        if x == lst[mid]:\n            index = mid\n        elif x < lst[mid]:\n            high = mid - 1\n        else:",
+        "detail": "Chapter01.example.5_binary_search",
+        "documentation": {}
+    },
+    {
+        "label": "fib",
+        "kind": 2,
+        "importPath": "Chapter01.example.6_fibonacci",
+        "description": "Chapter01.example.6_fibonacci",
+        "peekOfCode": "def fib(n):\n    if n <= 1:\n        return n\n    else:\n        return fib(n - 1) + fib(n - 2)\nif __name__ == \"__main__\":\n    print(fib(4))",
+        "detail": "Chapter01.example.6_fibonacci",
+        "documentation": {}
+    },
+    {
+        "label": "fib",
+        "kind": 2,
+        "importPath": "Chapter01.example.7_fib_iter",
+        "description": "Chapter01.example.7_fib_iter",
+        "peekOfCode": "def fib(n):\n    lst = [0, 1]\n    for i in range(2, n + 1):\n        lst.append(lst[i - 1] + lst[i - 2])\n    return lst[n]\nif __name__ == \"__main__\":\n    for i in range(0, 10):\n        print(fib(i), end = \" \")",
+        "detail": "Chapter01.example.7_fib_iter",
+        "documentation": {}
+    },
+    {
+        "label": "lst",
+        "kind": 5,
+        "importPath": "Chapter01.exercise.1_find_max",
+        "description": "Chapter01.exercise.1_find_max",
+        "peekOfCode": "lst = []\nfor _ in range(100):\n    lst.append(random.randint(0, 500))\nmax = lst[0]\nfor i in range(1, 100):\n    if max < lst[i]:\n        max = lst[i]\nprint(max)",
+        "detail": "Chapter01.exercise.1_find_max",
+        "documentation": {}
+    },
+    {
+        "label": "max",
+        "kind": 5,
+        "importPath": "Chapter01.exercise.1_find_max",
+        "description": "Chapter01.exercise.1_find_max",
+        "peekOfCode": "max = lst[0]\nfor i in range(1, 100):\n    if max < lst[i]:\n        max = lst[i]\nprint(max)",
+        "detail": "Chapter01.exercise.1_find_max",
+        "documentation": {}
+    },
+    {
+        "label": "lst",
+        "kind": 5,
+        "importPath": "Chapter01.exercise.2_find_min",
+        "description": "Chapter01.exercise.2_find_min",
+        "peekOfCode": "lst = []\nfor _ in range(100):\n    lst.append(random.randint(0, 500))\nmin = lst[0]\nfor i in range(1, 100):\n    if min > lst[i]:\n        min = lst[i]\nprint(min)",
+        "detail": "Chapter01.exercise.2_find_min",
+        "documentation": {}
+    },
+    {
+        "label": "min",
+        "kind": 5,
+        "importPath": "Chapter01.exercise.2_find_min",
+        "description": "Chapter01.exercise.2_find_min",
+        "peekOfCode": "min = lst[0]\nfor i in range(1, 100):\n    if min > lst[i]:\n        min = lst[i]\nprint(min)",
+        "detail": "Chapter01.exercise.2_find_min",
+        "documentation": {}
+    },
+    {
+        "label": "lst",
+        "kind": 5,
+        "importPath": "Chapter01.exercise.3_print_three",
+        "description": "Chapter01.exercise.3_print_three",
+        "peekOfCode": "lst = []\nfor _ in range(10):\n    lst.append(random.randint(0, 500))\none = 0\ntwo = 1\nthree = 2\nwhile one < len(lst) - 2:\n    print(lst[one], lst[two], lst[three])\n    if two == len(lst) - 2:\n        one += 1",
+        "detail": "Chapter01.exercise.3_print_three",
+        "documentation": {}
+    },
+    {
+        "label": "one",
+        "kind": 5,
+        "importPath": "Chapter01.exercise.3_print_three",
+        "description": "Chapter01.exercise.3_print_three",
+        "peekOfCode": "one = 0\ntwo = 1\nthree = 2\nwhile one < len(lst) - 2:\n    print(lst[one], lst[two], lst[three])\n    if two == len(lst) - 2:\n        one += 1\n        two = one + 1\n        three = two\n    if three == len(lst) - 1:",
+        "detail": "Chapter01.exercise.3_print_three",
+        "documentation": {}
+    },
+    {
+        "label": "two",
+        "kind": 5,
+        "importPath": "Chapter01.exercise.3_print_three",
+        "description": "Chapter01.exercise.3_print_three",
+        "peekOfCode": "two = 1\nthree = 2\nwhile one < len(lst) - 2:\n    print(lst[one], lst[two], lst[three])\n    if two == len(lst) - 2:\n        one += 1\n        two = one + 1\n        three = two\n    if three == len(lst) - 1:\n        two += 1",
+        "detail": "Chapter01.exercise.3_print_three",
+        "documentation": {}
+    },
+    {
+        "label": "three",
+        "kind": 5,
+        "importPath": "Chapter01.exercise.3_print_three",
+        "description": "Chapter01.exercise.3_print_three",
+        "peekOfCode": "three = 2\nwhile one < len(lst) - 2:\n    print(lst[one], lst[two], lst[three])\n    if two == len(lst) - 2:\n        one += 1\n        two = one + 1\n        three = two\n    if three == len(lst) - 1:\n        two += 1\n        three = two",
+        "detail": "Chapter01.exercise.3_print_three",
+        "documentation": {}
+    },
+    {
+        "label": "gcd",
+        "kind": 5,
+        "importPath": "Chapter01.exercise.5_gcd",
+        "description": "Chapter01.exercise.5_gcd",
+        "peekOfCode": "gcd = min(a, b)\nwhile True:\n    if a % gcd == 0 and b % gcd == 0:\n        break\n    gcd -= 1\nprint(gcd)",
+        "detail": "Chapter01.exercise.5_gcd",
+        "documentation": {}
+    },
+    {
+        "label": "binary_search_rec",
+        "kind": 2,
+        "importPath": "Chapter02.example.1_binary_search_rec",
+        "description": "Chapter02.example.1_binary_search_rec",
+        "peekOfCode": "def binary_search_rec(low, high):\n    if low > high:\n        return 0\n    mid = (low + high) // 2\n    if x == lst[mid]:\n        return mid\n    elif x < lst[mid]:\n        return binary_search_rec(low, mid - 1)\n    else:\n        return binary_search_rec(mid + 1, high)",
+        "detail": "Chapter02.example.1_binary_search_rec",
+        "documentation": {}
+    },
+    {
+        "label": "lst",
+        "kind": 5,
+        "importPath": "Chapter02.example.1_binary_search_rec",
+        "description": "Chapter02.example.1_binary_search_rec",
+        "peekOfCode": "lst = [0, 1, 2, 4, 5, 7, 8, 10, 12, 13, 14, 16, 19, 20]\nx = 7\ndef binary_search_rec(low, high):\n    if low > high:\n        return 0\n    mid = (low + high) // 2\n    if x == lst[mid]:\n        return mid\n    elif x < lst[mid]:\n        return binary_search_rec(low, mid - 1)",
+        "detail": "Chapter02.example.1_binary_search_rec",
+        "documentation": {}
+    },
+    {
+        "label": "x",
+        "kind": 5,
+        "importPath": "Chapter02.example.1_binary_search_rec",
+        "description": "Chapter02.example.1_binary_search_rec",
+        "peekOfCode": "x = 7\ndef binary_search_rec(low, high):\n    if low > high:\n        return 0\n    mid = (low + high) // 2\n    if x == lst[mid]:\n        return mid\n    elif x < lst[mid]:\n        return binary_search_rec(low, mid - 1)\n    else:",
+        "detail": "Chapter02.example.1_binary_search_rec",
+        "documentation": {}
+    },
+    {
+        "label": "merge",
+        "kind": 2,
+        "importPath": "Chapter02.example.2_merge_sort",
+        "description": "Chapter02.example.2_merge_sort",
+        "peekOfCode": "def merge(h, m, u, v, s):\n    i, j, k = 1, 1, 1\n    while i < h and j < m:\n        if u[i] < v[j]:\n            s[k] = u[i]\n            i += 1\n        else:\n            s[k] = v[j]\n            j += 1\n        k += 1",
+        "detail": "Chapter02.example.2_merge_sort",
+        "documentation": {}
+    },
+    {
+        "label": "merge_sort",
+        "kind": 2,
+        "importPath": "Chapter02.example.2_merge_sort",
+        "description": "Chapter02.example.2_merge_sort",
+        "peekOfCode": "def merge_sort(n, lst):\n    if n > 1:\n        h = n // 2\n        m = n - h\n        u = [0 for _ in range(0, h)]\n        v = [0 for _ in range(h, n)]\n        for index in range(0, h):\n            u[index] = lst[index]\n        for index in range(h, n):\n            v[index - h] = lst[index]",
+        "detail": "Chapter02.example.2_merge_sort",
+        "documentation": {}
+    },
+    {
+        "label": "merge",
+        "kind": 2,
+        "importPath": "Chapter02.example.3_merge",
+        "description": "Chapter02.example.3_merge",
+        "peekOfCode": "def merge(h, m, u, v, s):\n    i, j, k = 1, 1, 1\n    while i < h and j < m:\n        if u[i] < v[j]:\n            s[k] = u[i]\n            i += 1\n        else:\n            s[k] = v[j]\n            j += 1\n        k += 1",
+        "detail": "Chapter02.example.3_merge",
+        "documentation": {}
+    }
+]
