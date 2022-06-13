@@ -221,5 +221,23 @@
         "peekOfCode": "def merge(h, m, u, v, s):\n    i, j, k = 1, 1, 1\n    while i < h and j < m:\n        if u[i] < v[j]:\n            s[k] = u[i]\n            i += 1\n        else:\n            s[k] = v[j]\n            j += 1\n        k += 1",
         "detail": "Chapter02.example.3_merge",
         "documentation": {}
+    },
+    {
+        "label": "bin",
+        "kind": 2,
+        "importPath": "Chapter03.example.1_bi_coeff",
+        "description": "Chapter03.example.1_bi_coeff",
+        "peekOfCode": "def bin(n, k):\n    if k == 0 or n == k:\n        return 1\n    else:\n        return bin(n - 1, k - 1) + bin(n - 1, k)",
+        "detail": "Chapter03.example.1_bi_coeff",
+        "documentation": {}
+    },
+    {
+        "label": "bin",
+        "kind": 2,
+        "importPath": "Chapter03.example.2_dynamic_bi_coeff",
+        "description": "Chapter03.example.2_dynamic_bi_coeff",
+        "peekOfCode": "def bin(n, k):\n    B = [[0 for x in range(0, n)] for x in range(0, k)]\n    for i in range(0, n + 1):\n        for j in range(0, min(i, k) + 1):\n            if j == 0 or j == i:\n                B[i][j] = 1\n            else:\n                B[i][j] = B[i - 1][j - 1] + B[i - 1] + B[i - 1][j]\n    for i in range(0, n):\n        for j in range(0, k):",
+        "detail": "Chapter03.example.2_dynamic_bi_coeff",
+        "documentation": {}
     }
 ]
